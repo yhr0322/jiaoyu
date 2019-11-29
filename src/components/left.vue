@@ -58,7 +58,11 @@
     methods: {
       //切换左侧二级菜单
       add_tagone(items){
-        this.$store.commit("add_tagone",item)
+        
+        if (item.children.length == 0){
+        state.dynamicTags.push(items.name)
+        
+      } 
       },
        //切换左侧三级菜单
       add_tag(itema){

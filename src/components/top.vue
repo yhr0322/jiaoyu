@@ -2,8 +2,8 @@
   <div class="top">
    <div class="top_top">
    <p>
-   <span>首页</span>
-   <span>退出登录</span>
+   <span @click="zero">首页</span>
+   <span @click="respone">退出登录</span>
    </p>
    <img src="../assets/gif.gif" alt="">
    </div>
@@ -28,14 +28,15 @@
 
 <script >
 import { Component, Prop, Vue } from "vue-property-decorator";
-
+import storea from "../api/indexa.js"
 export default {
   data() {
     return {
      
        tags: [
           { name: '首页', type: 'success' },
-        ]
+        ],
+        token:''
     }
   },
   computed: {
@@ -48,6 +49,13 @@ export default {
        
         this.$store.commit('handleClose',tag)
       },
+      zero(){
+        this.$router.push('/dashboard')
+      },
+      respone(){
+         storea.save("token", this.token)
+         this.$router.push("/")
+      }
   },
 }
 </script>

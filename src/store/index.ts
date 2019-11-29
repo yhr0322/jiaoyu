@@ -21,15 +21,6 @@ export default new Vuex.Store({
     // handleClose_tag(state, obj) {
 
     // },
-   
-    add_tagone(state, item) {
-      if (item.children.length == 0){
-        state.dynamicTags.push(item.name)
-        // this.$router.push({ path: item.path })
-      } 
-    }
-
-
   },
   actions: {},
   modules: {}

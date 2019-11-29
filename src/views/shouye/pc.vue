@@ -3,8 +3,8 @@
   <left></left>
  <div class="box_conrent">
   <top></top>
- <div class="box_right" id="myChart">
- 
+ <div class="box_right">
+ <p class="p_title">凑合看一下吧！主要是为了Git!!!</p>
 
  </div>
  </div>
